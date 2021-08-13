@@ -63,9 +63,25 @@ buttonWice.addEventListener('mouseover', function() {
   buttonWice.style.position = 'absolute';
   buttonWice.style.left = Math.floor(Math.random() * 100) + '%';
   buttonWice.style.top = Math.floor(Math.random() * 100) + '%';
+  
+  var xhr = new XMLHttpRequest();
+  xhr.open("GET", "https://api.countapi.xyz/hit/satelerd.github.ioCodex-simple-pages/wice");
+  xhr.responseType = "json";
+  xhr.onload = function() {
+      document.getElementById('visits').innerText = this.response.value;
+  }
+  xhr.send();
 });
 
 buttonSaplay.addEventListener('click', function() {
+
+  var xhr = new XMLHttpRequest();
+  xhr.open("GET", "https://api.countapi.xyz/hit/satelerd.github.ioCodex-simple-pages/saplay");
+  xhr.responseType = "json";
+  xhr.onload = function() {
+      document.getElementById('visits').innerText = this.response.value;
+  }
+  xhr.send();
 
   function cardSaplayExists() {
     var posibleCard = document.getElementsByName('cardSaplay');
