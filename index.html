@@ -1,0 +1,111 @@
+<html>
+    <head>
+        <script>
+        document.addEventListener("DOMContentLoaded", function() {
+
+var h3 = document.createElement('h3');
+h3.innerHTML = "Quien ganaria en un 1v1 sin camiseta?";
+document.body.appendChild(h3);
+
+var buttonSaplay = document.createElement('button');
+buttonSaplay.innerHTML = 'Saplay';
+document.body.appendChild(buttonSaplay);
+
+var buttonWice = document.createElement('button');
+buttonWice.innerHTML = 'Wice';
+document.body.appendChild(buttonWice);
+
+buttonSaplay.style.borderRadius = '8px';
+buttonWice.style.borderRadius = '8px';
+
+buttonSaplay.style.margin = '10px';
+buttonWice.style.margin = '10px';
+
+var card = document.createElement('div');
+card.style.borderRadius = '8px';
+card.style.margin = '10px';
+card.style.padding = '10px';
+card.style.backgroundColor = '#f5f5f5';
+document.body.appendChild(card);
+
+card.style.boxShadow = '0px 0px 5px 0px rgba(0,0,0,0.75)';
+
+card.appendChild(h3);
+card.appendChild(buttonSaplay);
+card.appendChild(buttonWice);
+
+card.style.width = 'fit-content';
+
+card.style.margin = 'auto';
+
+buttonSaplay.style.display = 'inline-block';
+buttonWice.style.display = 'inline-block';
+
+card.style.display = 'grid';
+card.style.gridTemplateColumns = '1fr';
+
+var buttons = document.createElement('div');
+buttons.className = 'buttons';
+buttons.appendChild(buttonSaplay);
+buttons.appendChild(buttonWice);
+card.appendChild(buttons);
+
+buttonSaplay.style.width = '100px';
+buttonWice.style.width = '100px';
+
+buttons.style.margin = 'auto';
+
+card.style.marginTop = '5%';
+
+card.style.backgroundColor = 'white';
+
+buttonWice.addEventListener('mouseover', function() {
+  buttonWice.style.position = 'absolute';
+  buttonWice.style.left = Math.floor(Math.random() * 100) + '%';
+  buttonWice.style.top = Math.floor(Math.random() * 100) + '%';
+});
+
+buttonSaplay.addEventListener('click', function() {
+
+  function cardSaplayExists() {
+    var posibleCard = document.getElementsByName('cardSaplay');
+    console.log(posibleCard)
+    if (posibleCard.length > 0) {
+      return true;
+    } else {
+      return false;
+    }
+  }
+
+  if (!cardSaplayExists()) {
+    var cardSaplay = document.createElement('response-card');
+    cardSaplay.style.borderRadius = '8px';
+    cardSaplay.style.margin = '10px';
+    cardSaplay.style.padding = '10px';
+    cardSaplay.style.backgroundColor = '#f5f5f5';
+    document.body.appendChild(cardSaplay);
+  
+    var h1 = document.createElement('h1');
+    h1.innerHTML = 'Sabia decisión';
+    var h2 = document.createElement('h2');
+    h2.innerHTML = 'El mati jamas podria ganar';
+    cardSaplay.appendChild(h1);
+    cardSaplay.appendChild(h2);
+  
+    cardSaplay.style.width = 'fit-content';
+    cardSaplay.style.margin = 'auto';
+    cardSaplay.style.boxShadow = '0px 0px 5px 0px rgba(0,0,0,0.75)';
+    cardSaplay.style.display = 'grid';
+    cardSaplay.style.gridTemplateColumns = '1fr';
+    cardSaplay.style.marginTop = '1%';
+    cardSaplay.style.backgroundColor = 'white';
+  } else {
+    cardSaplay.style.backgroundColor = 'green';
+  }
+  
+});
+});
+        </script>
+    </head>
+    
+</html>
