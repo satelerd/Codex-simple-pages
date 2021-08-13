@@ -64,24 +64,26 @@ buttonWice.addEventListener('mouseover', function() {
   buttonWice.style.left = Math.floor(Math.random() * 100) + '%';
   buttonWice.style.top = Math.floor(Math.random() * 100) + '%';
   
-  var xhr = new XMLHttpRequest();
-  xhr.open("GET", "https://api.countapi.xyz/hit/satelerd.github.ioCodex-simple-pages/wice");
-  xhr.responseType = "json";
-  xhr.onload = function() {
+  var xhrWice = new XMLHttpRequest();
+  xhrWice.open("GET", "https://api.countapi.xyz/hit/satelerd.github.ioCodex-simple-pages/wice");
+  xhrWice.responseType = "json";
+  xhrWice.onload = function() {
       document.getElementById('visits').innerText = this.response.value;
   }
-  xhr.send();
+  xhrWice.send();
+  console.log(xhrWice)
 });
 
 buttonSaplay.addEventListener('click', function() {
 
-  var xhr = new XMLHttpRequest();
-  xhr.open("GET", "https://api.countapi.xyz/hit/satelerd.github.ioCodex-simple-pages/saplay");
-  xhr.responseType = "json";
-  xhr.onload = function() {
+  var xhrSat = new XMLHttpRequest();
+  xhrSat.open("GET", "https://api.countapi.xyz/hit/satelerd.github.ioCodex-simple-pages/saplay");
+  xhrSat.responseType = "json";
+  xhrSat.onload = function() {
       document.getElementById('visits').innerText = this.response.value;
   }
-  xhr.send();
+  xhrSat.send();
+  console.log(xhrSat)
 
   function cardSaplayExists() {
     var posibleCard = document.getElementsByName('cardSaplay');
