@@ -1,2 +1,5 @@
 # Codex-simple-pages
-Pa wear un rato con Codex
+
+Una pagina muy calma dedicada a Wice
+
+https://satelerd.github.io/Codex-simple-pages/
